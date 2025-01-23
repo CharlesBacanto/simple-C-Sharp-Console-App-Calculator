@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +11,7 @@ namespace simple_C_Sharp_Console_App_Calculator
     {
         private static float valueOne;
         private static float valueTwo;
+        private static char operand;
 
         public static float ValueOne
         {
@@ -21,6 +23,14 @@ namespace simple_C_Sharp_Console_App_Calculator
         {
             get { return valueTwo; }
             set { valueTwo = value; }
+        }
+
+        public static char Operand
+        {
+            get { return operand; }
+            set { if (value == '+' || value == '-' || value == '*' || value == '/') operand = value;
+                else Console.WriteLine("Arithmetic Operators Only: '+', '-', '*' , '/'");
+            }
         }
 
         public static float getValueOne()
@@ -36,7 +46,15 @@ namespace simple_C_Sharp_Console_App_Calculator
             ValueTwo = Convert.ToSingle(Console.ReadLine());
             return ValueTwo;
         }
+
+        public static char getOperand()
+        {
+            Console.Write("Please Enter the Operator: ");
+            Operand = Convert.ToChar(Console.ReadLine());
+            return Operand;
+        }
        
+
 
 
     }

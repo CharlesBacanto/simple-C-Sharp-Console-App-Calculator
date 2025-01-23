@@ -43,5 +43,7 @@ namespace simple_C_Sharp_Console_App_Calculator
         {
             Console.WriteLine("Is equal to: "+Answer);
         }
+
+        
     }
 }
