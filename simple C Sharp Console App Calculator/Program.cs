@@ -3,8 +3,28 @@
     {
         static void Main(string[] args)
         {
-           
-          Arithmetic.showAnswer(Arithmetic.addition(UserInput.getValueOne(),UserInput.getValueTwo()));    
+        UserInput.getOperand();
+
+        if(UserInput.Operand == '+')
+            {
+                Arithmetic.showAnswer(Arithmetic.addition(UserInput.getValueOne(), UserInput.getValueTwo()));
+            }
+        else if(UserInput.Operand == '-')
+            {
+                Arithmetic.showAnswer(Arithmetic.subtraction(UserInput.getValueOne(), UserInput.getValueTwo()));    
+            }
+        else if(UserInput.Operand == '*')
+            {
+                Arithmetic.showAnswer(Arithmetic.multiplication(UserInput.getValueOne(), UserInput.getValueTwo())); 
+            }
+        else if(UserInput.Operand == '/')
+            {
+                Arithmetic.showAnswer(Arithmetic.division(UserInput.getValueOne(), UserInput.getValueTwo()));
+            }
+            else
+            {
+                Console.WriteLine("Invalid Operator");
+            }
         }
     }
 }
