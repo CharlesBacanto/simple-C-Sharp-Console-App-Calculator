@@ -7,8 +7,9 @@
 
             try
             {
-                UserInput.getOperand();
+                UserInput.getOperand(); // Get Operator
 
+                //If Else-If Statement for Initial Computation
                 if (UserInput.Operand == '+')
                 {
                     Arithmetic.showAnswer(Arithmetic.addition(UserInput.getValueOne(), UserInput.getValueTwo()));
@@ -29,9 +30,11 @@
                 {
                     Console.WriteLine("Invalid Operator");
                 }
+
+
             
             }
-            catch (Exception ex)
+            catch (Exception ex) // Error Handling
             {
                 Console.WriteLine(ex.Message);
             }

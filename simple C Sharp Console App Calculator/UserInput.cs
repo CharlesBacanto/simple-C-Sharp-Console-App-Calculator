@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace simple_C_Sharp_Console_App_Calculator
 {
-    public static class UserInput
+    public static class UserInput // Contains all the methods for getting User Prompts
     {
-        private static float valueOne;
-        private static float valueTwo;
-        private static char operand;
+        private static float valueOne; // Stores the first value
+        private static float valueTwo; // Stores the second value
+        private static char operand; // Stores the operator character
 
-        public static float ValueOne
+        // Getters and Setters
+        public static float ValueOne 
         {
             get { return valueOne; }
             set { valueOne = value; }
@@ -28,26 +29,27 @@ namespace simple_C_Sharp_Console_App_Calculator
         public static char Operand
         {
             get { return operand; }
+            //Set the recognized values only to the following key's '+', '-', '/' , '*'
             set { if (value == '+' || value == '-' || value == '*' || value == '/') operand = value;
                 else Console.WriteLine("Arithmetic Operators Only: '+', '-', '*' , '/'");
             }
         }
 
-        public static float getValueOne()
+        public static float getValueOne() // Method for getting the first value
         {
             Console.Write("Please Enter a Value: ");
             ValueOne = Convert.ToSingle(Console.ReadLine());
             return ValueOne;
         }
 
-        public static float getValueTwo()
+        public static float getValueTwo() // Method for getting the second value
         {
             Console.Write("Please Enter a Value: ");
             ValueTwo = Convert.ToSingle(Console.ReadLine());
             return ValueTwo;
         }
 
-        public static char getOperand()
+        public static char getOperand() // Method for getting operator
         {
             Console.Write("Please Enter the Operator: ");
             Operand = Convert.ToChar(Console.ReadLine());
