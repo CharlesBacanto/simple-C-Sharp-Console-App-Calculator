@@ -3,8 +3,8 @@
     {
         static void Main(string[] args)
         {
-            UserInput.getValueOne();
-            UserInput.getValueTwo();
+           
+          Arithmetic.showAnswer(Arithmetic.addition(UserInput.getValueOne(),UserInput.getValueTwo()));    
         }
     }
 }
